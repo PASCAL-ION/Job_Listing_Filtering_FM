@@ -1,8 +1,8 @@
-import { StyledCardsContainer } from './components/styledComponents/CardsContainer.styled'
 import { StyledHeader } from './components/styledComponents/header.styled'
 import GlobalStyle from './globalStyles'
 import { useEffect, useState } from 'react'
 import Card from './components/Card'
+import { CardContainerStyled } from './components/styledComponents/CardContainer.styled';
 
 type Job = {
     id: number;
@@ -53,12 +53,12 @@ function App() {
     <>
       <GlobalStyle />
       <StyledHeader />
-      <StyledCardsContainer>
+      <CardContainerStyled>
         {data.map(({id, ...job}) => (
           <Card key={id} {...job}
           />
         ))}
-      </StyledCardsContainer>
+      </CardContainerStyled>
     </>
   );
 }
