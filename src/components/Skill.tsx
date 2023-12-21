@@ -5,9 +5,14 @@ type SkillProps = {
 }
 
 export default function Skill({item}: SkillProps) {
+
+  function addToFilter (item: string) {
+    alert(item)
+  }
+
   return (
     <SkillStyled>
-        {item && item}
+        <button onClick={() => addToFilter(item)}>{item && item}</button> 
     </SkillStyled>
   )
 }

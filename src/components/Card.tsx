@@ -43,8 +43,10 @@ export default function Card({
     setSkillsArray(array);
   }, [role, level, languages, tools]);
 
+  
+
   return (
-    <StyledCard>
+    <StyledCard featured={featured}>
       <FlexLayout>
         <FlexLayout>
           <div>
@@ -53,7 +55,7 @@ export default function Card({
           <div>
             <FlexRow>
               <CompanyNameStyled>{company}</CompanyNameStyled>
-              <NewFeaturedTagGroupStyled featured={featured} isNew={isNew}>
+              <NewFeaturedTagGroupStyled>
                 <span>{isNew && <>NEW!</>}</span>
                 <span>{featured && <>FEATURED</>}</span>
               </NewFeaturedTagGroupStyled>
@@ -69,7 +71,7 @@ export default function Card({
         <hr />
         <ul>
           {skillsArray.map((item, index) => (
-            <Skill key={`item-${index}`} item={item} />
+            <Skill key={`item-${index}`} item={item}/>
           ))}
         </ul>
       </FlexLayout>

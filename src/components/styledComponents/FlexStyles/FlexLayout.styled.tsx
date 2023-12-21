@@ -7,9 +7,10 @@ export const FlexLayout = styled.div`
     align-items: flex-start;
     height: 100%;
     
-    @media (min-width: 700px) {
+    @media (min-width: 900px) {
         flex-direction: row;   
         align-items: center;
+        gap: 50px;
     }
     
 `
